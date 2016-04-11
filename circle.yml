@@ -3,4 +3,6 @@ machine:
         version: oraclejdk8
 test:
     post:
-        - python <(curl -s https://raw.githubusercontent.com/TouK/sputnik-ci/master/sputnik-ci.py)
+        - echo $CI_PULL_REQUESTS
+        - echo $CI_PULL_REQUEST
+        - python <(curl -s https://raw.githubusercontent.com/rafalnowak/sputnik-ci/master/sputnik-ci.py) 
